@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Marsya Tersayang ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Parisienne&display=swap');
+
+        :root {
+            --pink-light: #FFD1DC;
+            --pink-medium: #FFB6C1;
+            --red-romantic: #FF69B4;
+            --text-dark: #333;
+            --text-light: #FFF;
+        }
+
+        body {
+            font-family: 'Dancing Script', cursive;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, var(--pink-light), var(--pink-medium));
+            color: var(--text-dark);
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: var(--red-romantic);
+            color: var(--text-light);
+            padding: 40px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            font-family: 'Parisienne', cursive;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            animation: fadeInDown 2s ease-out;
+        }
+
+        header p {
+            font-size: 1.5em;
+            font-style: italic;
+            animation: fadeIn 2.5s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .heart-animation {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: var(--red-romantic);
+            transform: rotate(-45deg);
+            animation: floatHearts 10s infinite ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .heart-animation::before,
+        .heart-animation::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: var(--red-romantic);
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart-animation::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart-animation::after {
+            left: 10px;
+            top: 0;
+        }
+
+        @keyframes floatHearts {
+            0% { transform: translateY(0) rotate(-45deg) scale(0.5); opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { transform: translateY(-200px) rotate(-45deg) scale(1.2); opacity: 0; }
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        h2 {
+            font-family: 'Parisienne', cursive;
+            color: var(--red-romantic);
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, border 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+            border: 3px solid var(--red-romantic);
+        }
+
+        .love-message {
+            font-size: 1.6em;
+            line-height: 1.6;
+            margin-top: 30px;
+            padding: 25px;
+            background-color: var(--pink-light);
+            border-left: 5px solid var(--red-romantic);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: popIn 1.5s ease-out;
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: var(--red-romantic);
+            color: var(--text-light);
+            font-size: 1.2em;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1.2em;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            }
+            .gallery-item img {
+                 height: 100px;
+            }
+            .love-message {
+                font-size: 1.3em;
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cinta Abadi Untuk Marsya-ku</h1>
+        <p>Di setiap detak jantungku, ada namamu terukir indah...</p>
+        <!-- Hearts animation will be injected here by JS -->
+    </header>
+
+    <div class="container">
+        <section class="gallery-section">
+            <h2>Momen Indah Kita</h2>
+            <div class="gallery">
+                <div class="gallery-item"><img src="https://via.placeholder.com/150/FFD1DC/333?text=Foto+1" alt="Placeholder Image 1"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/150/FFB6C1/333?text=Foto+2" alt="Placeholder Image 2"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/150/FF69B4/FFF?text=Foto+3" alt="Placeholder Image 3"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/150/FFC0CB/333?text=Foto+4" alt="Placeholder Image 4"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/150/FFDAB9/333?text=Foto+5" alt="Placeholder Image 5"></div>
+                <div class="gallery-item"><img src="https://via.placeholder.com/150/F08080/FFF?text=Foto+6" alt="Placeholder Image 6"></div>
+            </div>
+        </section>
+
+        <section class="message-section">
+            <h2>Pesan Cinta Untukmu</h2>
+            <div class="love-message">
+                <p>Marsya, sejak pertama kali aku melihatmu, duniaku berubah menjadi lebih cerah dan penuh warna. Setiap tawa, setiap senyum, setiap tatapanmu adalah melodi terindah bagi jiwaku. Aku bersyukur memiliki kamu, permata hatiku. Semoga cinta kita terus tumbuh dan mekar seperti bunga-bunga di taman hati kita.</p>
+                <p>Aku mencintaimu, lebih dari kata-kata bisa mengungkapkan.</p>
+                <p>Dari seseorang yang selalu mengagumimu,</p>
+                <p><strong>[Hykel]</strong></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; Love U Babe💖.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('header');
+
+            function createHeart() {
+                const heart = document.createElement('div');
+                heart.classList.add('heart-animation');
+                
+                const size = Math.random() * 20 + 10; // Hearts between 10px and 30px
+                heart.style.width = `${size}px`;
+                heart.style.height = `${size}px`;
+                heart.style.left = `${Math.random() * 100}vw`;
+                heart.style.animationDuration = `${Math.random() * 5 + 5}s`; 
+                heart.style.bottom = `-50px`; // Start from bottom
+
+                header.appendChild(heart);
+
+                heart.addEventListener('animationend', () => {
+                    heart.remove();
+                });
+            }
+            
+            setInterval(createHeart, 500); // Create a new heart every 0.5 seconds
+
+            // Optional: Smooth scroll for internal links if any were added
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
